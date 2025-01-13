@@ -12,9 +12,14 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        
+
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        
+
+        
 
         <link rel="stylesheet" href="{{ asset('zendo_assets/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('zendo_assets/css/animate.min.css') }}">
@@ -90,7 +95,7 @@
                         <li><a href="/" class="smoothScroll">HOME</a></li>
                         <li><a href="/categories" class="smoothScroll">CATEGORIES</a></li>
                         <li><a href="/menus" class="smoothScroll">SPECIAL MENU</a></li>
-                        <li><a href="/reservations/step-one" class="smoothScroll">MAKE RESERVATION</a></li>
+                        {{-- <li><a href="/reservations/step-one" class="smoothScroll">MAKE RESERVATION</a></li> --}}
                         <li><a href="/contact" class="smoothScroll">CONTACT</a></li>
                     </ul>
                 </div>

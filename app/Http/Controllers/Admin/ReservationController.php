@@ -10,6 +10,8 @@ use App\Models\Table;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Psy\Readline\Hoa\Console;
+use Barryvdh\DomPDF\Facade\Pdf;
+
 
 class ReservationController extends Controller
 {
@@ -133,7 +135,20 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reservation $reservation)
+    
+     public function exportPdf()
+     {
+         // Ambil data reservasi
+         $reservations = Reservation::with('table')->get();
+ 
+         // Render Blade ke PDF
+         $pdf = Pdf::loadView('admin.reservations.pdf', compact('reservations'));
+ 
+         // Download file PDF
+         return $pdf->download('reservations.pdf');
+     }
+    
+     public function destroy(Reservation $reservation)
     {
         $reservation->delete();
 

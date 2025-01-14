@@ -12,6 +12,13 @@ use App\Http\Controllers\Frontend\ReservationController as FrontendReservationCo
 use App\Http\Controllers\Frontend\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
+
+
+
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,6 +46,7 @@ Route::get('/menus', [FrontendMenuController::class, 'index'])->name('menus.inde
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'contact'])->name('save.contact');
 Route::get('/thank-you', [WelcomeController::class, 'thankyou'])->name('thankyou');
+Route::get('/admin/reservations/pdf', [ReservationController::class, 'exportPdf'])->name('admin.reservations.pdf');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

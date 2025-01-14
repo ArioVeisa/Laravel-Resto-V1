@@ -6,11 +6,14 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-            <div class="flex justify-end m-2 p-2">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 ">
+            <div class="flex flex-wrap justify-end m-2 p-2 space-x-2">
+                <a href="{{ route('admin.reservations.pdf') }}" class="mr-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">Download Data</a>
+                
                 <a href="{{ route('admin.reservations.create') }}" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-700 rounded-lg text-white">Add New Reservation</a>
             </div>
+            
+            
 
             <div class="flex flex-col">
                 <div class="p-6 bg-white ">
